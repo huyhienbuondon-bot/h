@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIỮ LẠI THANH XUÂN</title>
+    <meta name="description" content="Lưu giữ vẻ đẹp thanh xuân rạng ngời cùng thiên nhiên. Giữ nguyên 100% diện mạo nhân vật." />
+    <meta property="og:title" content="GIỮ LẠI THANH XUÂN" />
+    <meta property="og:description" content="Lưu giữ vẻ đẹp thanh xuân rạng ngời cùng thiên nhiên. Giữ nguyên 100% diện mạo nhân vật." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/react-image-crop/dist/ReactCrop.css">
+    <style>
+      body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+      }
+      .font-playfair {
+        font-family: 'Playfair Display', serif;
+      }
+      /* Disable text selection */
+      body, * {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      img:not(.allow-context-menu) {
+        pointer-events: none;
+      }
+      .ReactCrop__child-wrapper, 
+      .ReactCrop__image,
+      .ReactCrop__crop-selection {
+        -webkit-user-select: auto;
+        user-select: auto;
+      }
+      .ReactCrop__image {
+        pointer-events: auto;
+      }
+      .allow-context-menu {
+        -webkit-user-select: auto;
+        user-select: auto;
+        pointer-events: auto;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(217, 119, 6, 0.22);
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+    "react-image-crop": "https://esm.sh/react-image-crop@11.0.5"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#f3f6fa] text-slate-900">
+    <div id="root"></div>
+    <script>
+      document.addEventListener('contextmenu', event => {
+        if (event.target.classList && event.target.classList.contains('allow-context-menu')) {
+          return;
+        }
+        event.preventDefault();
+      });
+
+      document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 123 || 
+           (event.ctrlKey && event.shiftKey && (event.keyCode === 73 || event.keyCode === 74)) ||
+           (event.ctrlKey && event.keyCode === 85) ||
+           (event.ctrlKey && event.keyCode === 83)) {
+          event.preventDefault();
+        }
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

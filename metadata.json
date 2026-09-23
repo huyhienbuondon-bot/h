@@ -1,0 +1,11 @@
+{
+  "name": "GIỮ LẠI THANH XUÂN",
+  "description": "Lưu giữ vẻ đẹp thanh xuân rạng ngời cùng thiên nhiên. Giữ nguyên 100% diện mạo nhân vật.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
